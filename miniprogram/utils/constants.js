@@ -18,5 +18,18 @@ const INTERVIEW_TYPE = {
   UNKOWN: Symbol('unkonw type')
 }
 
+const GUIDE_TYPE = {
+  HR: Symbol('HR'),
+  RECRUITER: Symbol('Recruiter'),
+}
+
+const STORE_KEY = {
+  GUIDE:Symbol('guide-store'),
+  INTERVIEW:Symbol('interview-store'),
+  EMPLOYER_COMPANY:Symbol('empolyer-company-store'),
+}
+
 module.exports.INTERVIEW_STAGE = INTERVIEW_STAGE;
 module.exports.INTERVIEW_TYPE = INTERVIEW_TYPE;
+module.exports.GUIDE_TYPE = GUIDE_TYPE;
+module.exports.STORE_KEY = STORE_KEY;

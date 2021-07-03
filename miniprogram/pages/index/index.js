@@ -10,6 +10,17 @@ Page({
     wx.navigateTo({
       url: '/pages/add-inter/index',
     })
+  },
+
+  showInfo(){
+    wx.getStorageInfo({
+      success: (option) => {
+        console.log(option)
+        // this.setData = {
+          
+        // }
+      },
+    })
   }
   
 })

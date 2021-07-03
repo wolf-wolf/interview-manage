@@ -3,14 +3,21 @@
   <view class="input-wrapper">
     <view class="input-inner-wrapper">
       <text class="input-label">公司名称：</text>
-      <input class="input-field" auto-focus placeholder="请输入公司名称" />
+      <input class="input-field" model:value="{{companyName}}" auto-focus placeholder="请输入公司名称" />
     </view>
   </view>
 
   <view class="input-wrapper">
     <view class="input-inner-wrapper">
       <text class="input-label">猎头姓名：</text>
-      <input class="input-field" placeholder="请输入猎头姓名" />
+      <input class="input-field" model:value="{{guideName}}" placeholder="请输入猎头姓名" />
+    </view>
+  </view>
+
+  <view class="input-wrapper">
+    <view class="input-inner-wrapper">
+      <text class="input-label">面试地点：</text>
+      <input class="input-field" model:value="{{address}}" placeholder="面试地点" />
     </view>
   </view>
 
@@ -32,5 +39,5 @@
     </view>
   </view>
 
-  <button type="primary" bindtap="goAddPage">新增面试安排</button>
+  <button type="primary" bindtap="addInter">新增面试安排</button>
 </view>

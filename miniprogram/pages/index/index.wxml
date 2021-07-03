@@ -2,5 +2,6 @@
 <view class="container">
   <text>hello world</text>
   <button type="primary" bindtap="goAddPage">新增面试安排</button>
+  <button type="primary" bindtap="showInfo">test</button>
 </view>
 
