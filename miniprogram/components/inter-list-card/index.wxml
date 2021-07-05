@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="inter-list-card">
+  <view class="status-label">{{statusTitle}}</view>
+  <block wx:if="{{list.length}}">
+    <interview-item wx:for="{{list}}" inter-info="{{item}}"></interview-item>
+  </block>
+  <view wx:else class="no-itner-placeholder"> 暂无 </view>
+</view>

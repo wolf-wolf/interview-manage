@@ -10,14 +10,15 @@ class InterViewStage {
 }
 // 面试日程
 class InterViewSchedule {
-  constructor({ recruiterId, employerCompanyId, interDate, interTime, address, reamark }) {
-    this.recruiterId = recruiterId;
+  constructor({ guideId, employerCompanyId, interDate, interTime, address, remark, jobDesc }) {
+    this.guideId = guideId;
     this.employerCompanyId = employerCompanyId;
     this.interDate = interDate;
     this.interTime = interTime;
     this.address = address;
-    this.reamark = reamark;
-    this.status = [new InterViewStage({
+    this.remark = remark;
+    this.jobDesc = jobDesc;
+    this.stage = [new InterViewStage({
       type: constants.INTERVIEW_TYPE.UNKOWN,
       status: constants.INTERVIEW_STAGE.SEND
     })];

@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="interview-item"  style="background: {{bgColor}}" bindtap="goToDetail">
+  <view class="top">
+    <text class="inter-date-time">{{interInfo.interDate + ' ' + interInfo.interTime}}</text>
+    <text class="inter-type">视频面试</text>
+  </view>
+  <view class="content-wrapper">
+    <view class="inter-company">{{interInfo.employerCompany.name}}</view>
+    <view class="inter-address">{{interInfo.address}}</view>
+  </view>
+</view>

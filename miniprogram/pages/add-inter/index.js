@@ -1,7 +1,6 @@
 //index.js
 const utils = require("../../utils/common.js")
-const service = require("../../utils/service.js")
-const model = require("../../utils/model.js")
+const dao = require("../../utils/dao/index")
 
 const app = getApp()
 
@@ -11,19 +10,27 @@ Page({
     guideName: '',
     address: '',
     interDate: utils.format(Date.now(), 'YYYY-MM-DD'),
-    interTime: utils.format(Date.now(), 'hh:mm')
+    interTime: utils.format(Date.now(), 'hh:mm'),
+    remark: '',
+    jobDesc: ''
   },
 
   addInter() {
-    let guideInfo = service.addGuide({ name: this.data.guideName });
-    let companyInfo = service.addEmployerCompany({ name: this.data.companyName });
+    let guideInfo = dao.guide.add({ name: this.data.guideName });
+    let companyInfo = dao.employerCompany.add({ name: this.data.companyName });
 
-    service.addInter({
+    dao.inter.add({
       employerCompanyId: companyInfo.id,
-      recruiterId: guideInfo.id,
+      guideId: guideInfo.id,
       address: this.data.address,
       interDate: this.data.interDate,
       interTime: this.data.interTime,
+      remark: this.data.remark,
+      jobDesc: this.data.jobDesc,
+    });
+
+    wx.navigateTo({
+      url: '/pages/index/index',
     })
   }
 })

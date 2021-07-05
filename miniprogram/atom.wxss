@@ -1,3 +1,7 @@
 .mg-b-8 {
   margin-bottom: 16rpx;
 }
+
+.mg-t-32{
+  margin-top: 64rpx;
+}

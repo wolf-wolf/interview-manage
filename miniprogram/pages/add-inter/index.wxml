@@ -9,7 +9,7 @@
 
   <view class="input-wrapper">
     <view class="input-inner-wrapper">
-      <text class="input-label">猎头姓名：</text>
+      <text class="input-label">联系人名：</text>
       <input class="input-field" model:value="{{guideName}}" placeholder="请输入猎头姓名" />
     </view>
   </view>
@@ -17,7 +17,7 @@
   <view class="input-wrapper">
     <view class="input-inner-wrapper">
       <text class="input-label">面试地点：</text>
-      <input class="input-field" model:value="{{address}}" placeholder="面试地点" />
+      <input class="input-field" model:value="{{address}}" placeholder="请选择面试地点" />
     </view>
   </view>
 
@@ -39,5 +39,19 @@
     </view>
   </view>
 
-  <button type="primary" bindtap="addInter">新增面试安排</button>
+  <view class="textarea-wrapper">
+    <view class="textarea-inner-wrapper">
+      <view class="textarea-label">职位详情：</view>
+      <textarea class="textarea-field" model:value="{{jobDesc}}" auto-height placeholder="请输入职位详情"></textarea>
+    </view>
+  </view>
+
+  <view class="textarea-wrapper">
+    <view class="textarea-inner-wrapper">
+      <view class="textarea-label">备注：</view>
+      <textarea class="textarea-field" model:value="{{remark}}" auto-height placeholder="请输入备注"></textarea>
+    </view>
+  </view>
+
+  <button class="mg-t-32" type="primary" bindtap="addInter" plain="true">添加</button>
 </view>

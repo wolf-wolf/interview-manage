@@ -5,3 +5,18 @@ page {
   background-color: #f6f6f6;
   padding-bottom: 60rpx;
 }
+
+.add-btn {
+  position: fixed;
+  right: 36rpx;
+  bottom: 180rpx;
+  border-radius: 50%;
+  font-size: 36rpx;
+  height: 100rpx;
+  width: 100rpx;
+  padding: 0rpx;
+  line-height: 100rpx;
+  background: #07c160;
+  text-align: center;
+  color: #fff;
+}

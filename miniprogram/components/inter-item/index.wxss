@@ -1,0 +1,34 @@
+/**index.wxss**/
+.interview-item {
+  background: #fff;
+  /* border-top: 2rpx solid #e4e4e4; */
+  margin-bottom: 4rpx;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.interview-item .content-wrapper {
+  padding: 16rpx 24rpx;
+}
+
+.interview-item .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 16rpx 24rpx;
+}
+
+.interview-item .top .inter-date-time {
+  font-weight: bold;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.interview-item .inter-company,
+.interview-item .inter-address {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.interview-item .inter-company {
+  margin-bottom: 16rpx;
+}

@@ -1,0 +1,58 @@
+/**index.wxss**/
+.container {
+  padding: 16rpx 24rpx;
+  width: 100vw;
+  background: #fff;
+}
+
+.company-name {
+  font-size: 48rpx;
+  font-weight: bold;
+  text-align: left;
+  color: #333;
+  width: 100%;
+}
+
+.base-info-panel {
+  font-size: 24rpx;
+  color: #666;
+  width: 100%;
+  padding: 16rpx 0rpx;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 28rpx;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.col {
+  width: 49%;
+}
+
+.content-wrapper {
+  padding-bottom: 16rpx;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 28rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  font-weight: bold;
+  text-align: left;
+  color: #333;
+  width: 100%;
+  margin-bottom: 16rpx;
+}
+
+.detail {
+  font-size: 24rpx;
+  text-align: left;
+  color: #666;
+  width: 100%;
+  margin-bottom: 16rpx;
+}

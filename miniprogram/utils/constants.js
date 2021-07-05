@@ -24,9 +24,9 @@ const GUIDE_TYPE = {
 }
 
 const STORE_KEY = {
-  GUIDE:Symbol('guide-store'),
-  INTERVIEW:Symbol('interview-store'),
-  EMPLOYER_COMPANY:Symbol('empolyer-company-store'),
+  GUIDE: 'guide-store',
+  INTERVIEW: 'interview-store',
+  EMPLOYER_COMPANY: 'employer-company-store',
 }
 
 module.exports.INTERVIEW_STAGE = INTERVIEW_STAGE;

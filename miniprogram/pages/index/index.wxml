@@ -1,7 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-  <text>hello world</text>
-  <button type="primary" bindtap="goAddPage">新增面试安排</button>
-  <button type="primary" bindtap="showInfo">test</button>
-</view>
+  <inter-list-card status-title="进行中..." list="{{underwayInter}}" />
+  <inter-list-card status-title="即将开始..." list="{{comingInter}}" />
+  <inter-list-card status-title="已结束..." list="{{finishInter}}" />
 
+  <view class="add-btn" bindtap="goAddPage">+</view>
+</view>

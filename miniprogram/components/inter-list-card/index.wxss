@@ -1,0 +1,28 @@
+.inter-list-card {
+  background: #fff;
+  width: 100vw;
+  margin-bottom: 24rpx;
+  box-shadow: 0rpx 4rpx 4rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+.status-label {
+  text-align: left;
+  color: #666;
+  font-size: 24rpx;
+  padding: 12rpx 24rpx;
+  background: #fff;
+  box-sizing: border-box;
+  width: 100vw;
+  border-bottom: 1px solid #efefef;
+}
+
+.no-itner-placeholder {
+  text-align: center;
+  color: #333;
+  font-size: 24rpx;
+  padding: 6rpx 24rpx;
+  background: #fff;
+  width: 100vw;
+  height: 100rpx;
+  box-sizing: border-box;
+}
