@@ -1,3 +1,5 @@
+const service = require("../../utils/service.js")
+
 Component({
   properties: {
     interInfo: {
@@ -10,9 +12,11 @@ Component({
   },
   methods: {
     goToDetail: function () {
-      wx.navigateTo({
-        url: '/pages/inter-detail/index',
-      })
+      service.goPage('interDetail', {
+        params: {
+          id: this.data.interInfo.id
+        }
+      });
     }
   },
   observers: {

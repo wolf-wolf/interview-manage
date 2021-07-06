@@ -67,6 +67,7 @@
   padding-bottom: 16rpx;
   border-bottom: 1px solid #efefef;
   margin-bottom: 28rpx;
+  width: 100%;
 }
 
 .title {

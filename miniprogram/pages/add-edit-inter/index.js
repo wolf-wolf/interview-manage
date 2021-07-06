@@ -1,5 +1,5 @@
 //index.js
-const utils = require("../../utils/common.js")
+const service = require("../../utils/service.js")
 const dao = require("../../utils/dao/index")
 
 const app = getApp()
@@ -13,6 +13,20 @@ Page({
     // interTime: utils.format(Date.now(), 'hh:mm'),
     remark: '',
     jobDesc: ''
+  },
+
+  onLoad: function (query) {
+    let interInfo = dao.inter.getById(query.id);
+    console.log(interInfo)
+    let employerCompany = dao.employerCompany.getById(interInfo.employerCompanyId);
+    let guideInfo = dao.guide.getById(interInfo.guideId);
+    let fullInfo = {
+      ...interInfo,
+      employerCompany,
+      guideInfo
+    };
+
+    console.log('fullInfo', fullInfo)
   },
 
   addInter() {
@@ -29,8 +43,6 @@ Page({
       jobDesc: this.data.jobDesc,
     });
 
-    wx.navigateTo({
-      url: '/pages/index/index',
-    })
+    service.goPage('home');
   }
 })
