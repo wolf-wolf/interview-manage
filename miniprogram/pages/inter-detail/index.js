@@ -9,17 +9,18 @@ Page({
   data: {
     interInfo: {}
   },
-
   onLoad: function (query) {
-    console.log(query)
-    let interInfo = dao.inter.getById(query.id);
+    this.setData({
+      interInfo: { id: query.id }
+    })
+  },
+  onShow: function () {
+    this.initData(this.data.interInfo.id);
+  },
+  initData(interId) {
+    let interInfo = dao.inter.getById(interId);
     let employerCompany = dao.employerCompany.getById(interInfo.employerCompanyId);
     let guideInfo = dao.guide.getById(interInfo.guideId);
-    console.log({
-      ...interInfo,
-      employerCompany,
-      guideInfo
-    })
     this.setData({
       interInfo: {
         ...interInfo,
