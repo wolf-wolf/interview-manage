@@ -8,9 +8,9 @@ Page({
   data: {
     companyName: '',
     guideName: '',
-    address: '',
-    interDate: utils.format(Date.now(), 'YYYY-MM-DD'),
-    interTime: utils.format(Date.now(), 'hh:mm'),
+    // address: '',
+    // interDate: utils.format(Date.now(), 'YYYY-MM-DD'),
+    // interTime: utils.format(Date.now(), 'hh:mm'),
     remark: '',
     jobDesc: ''
   },
@@ -22,9 +22,9 @@ Page({
     dao.inter.add({
       employerCompanyId: companyInfo.id,
       guideId: guideInfo.id,
-      address: this.data.address,
-      interDate: this.data.interDate,
-      interTime: this.data.interTime,
+      // address: this.data.address,
+      // interDate: this.data.interDate,
+      // interTime: this.data.interTime,
       remark: this.data.remark,
       jobDesc: this.data.jobDesc,
     });

@@ -5,6 +5,35 @@
   background: #fff;
 }
 
+.op-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2rpx solid #efefef;
+  padding-bottom: 16rpx;
+  font-size: 24rpx;
+  margin-bottom: 16rpx;
+}
+
+.op-panel .op-btn {
+  border-radius: 4rpx;
+  border: 4rpx solid #efefef;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rpx 16rpx;
+  box-sizing: border-box;
+}
+
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .company-name {
   font-size: 48rpx;
   font-weight: bold;

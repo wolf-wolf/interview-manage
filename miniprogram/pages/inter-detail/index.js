@@ -10,6 +10,14 @@ Page({
     guideName: '',
     address: '',
     interDate: utils.format(Date.now(), 'YYYY-MM-DD'),
-    interTime: utils.format(Date.now(), 'hh:mm')
+    interTime: utils.format(Date.now(), 'hh:mm'),
+
+    isShowOpPanel: false
   },
+
+  toggleOpPanel() {
+    this.setData({
+      isShowOpPanel: !this.data.isShowOpPanel
+    })
+  }
 })

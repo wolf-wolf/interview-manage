@@ -60,3 +60,14 @@
 .container {
   box-sizing: border-box;
 }
+
+.card-panel {
+  width: 100vw;
+  margin-bottom: 24rpx;
+  background: #fff;
+}
+
+.card-panel .textarea-wrapper:last-child .textarea-inner-wrapper,
+.card-panel .input-wrapper:last-child .input-inner-wrapper {
+  border-bottom: 0rpx;
+}

@@ -1,55 +1,61 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="input-wrapper">
-    <view class="input-inner-wrapper">
-      <text class="input-label">公司名称：</text>
-      <input class="input-field" model:value="{{companyName}}" auto-focus placeholder="请输入公司名称" />
+  <!-- <view class="card-panel">
+    <view class="input-wrapper">
+      <view class="input-inner-wrapper">
+        <text class="input-label">面试地点：</text>
+        <input class="input-field" model:value="{{address}}" placeholder="请选择面试地点" />
+      </view>
+    </view>
+
+    <view class="input-wrapper">
+      <view class="input-inner-wrapper">
+        <text class="input-label">面试日期：</text>
+        <picker mode="date" model:value="{{interDate}}" class="input-field date" placeholder="请选择面试日期">
+          <text>{{interDate}}</text>
+        </picker>
+      </view>
+    </view>
+
+    <view class="input-wrapper">
+      <view class="input-inner-wrapper">
+        <text class="input-label">面试时间：</text>
+        <picker mode="time" model:value="{{interTime}}" class="input-field" placeholder="请选择面试时间">
+          <text>{{interTime}}</text>
+        </picker>
+      </view>
+    </view>
+  </view> -->
+
+  <view class="card-panel">
+    <view class="input-wrapper">
+      <view class="input-inner-wrapper">
+        <text class="input-label">公司名称：</text>
+        <input class="input-field" model:value="{{companyName}}" auto-focus placeholder="请输入公司名称" />
+      </view>
+    </view>
+
+    <view class="input-wrapper">
+      <view class="input-inner-wrapper">
+        <text class="input-label">联系人名：</text>
+        <input class="input-field" model:value="{{guideName}}" placeholder="请输入猎头姓名" />
+      </view>
     </view>
   </view>
-
-  <view class="input-wrapper">
-    <view class="input-inner-wrapper">
-      <text class="input-label">联系人名：</text>
-      <input class="input-field" model:value="{{guideName}}" placeholder="请输入猎头姓名" />
+  <view class="card-panel">
+    <view class="textarea-wrapper">
+      <view class="textarea-inner-wrapper">
+        <view class="textarea-label">职位详情：</view>
+        <textarea class="textarea-field" model:value="{{jobDesc}}" auto-height placeholder="请输入职位详情"></textarea>
+      </view>
     </view>
   </view>
-
-  <view class="input-wrapper">
-    <view class="input-inner-wrapper">
-      <text class="input-label">面试地点：</text>
-      <input class="input-field" model:value="{{address}}" placeholder="请选择面试地点" />
-    </view>
-  </view>
-
-  <view class="input-wrapper">
-    <view class="input-inner-wrapper">
-      <text class="input-label">面试日期：</text>
-      <picker mode="date" model:value="{{interDate}}" class="input-field date" placeholder="请选择面试日期">
-        <text>{{interDate}}</text>
-      </picker>
-    </view>
-  </view>
-
-  <view class="input-wrapper">
-    <view class="input-inner-wrapper">
-      <text class="input-label">面试时间：</text>
-      <picker mode="time" model:value="{{interTime}}" class="input-field" placeholder="请选择面试时间">
-        <text>{{interTime}}</text>
-      </picker>
-    </view>
-  </view>
-
-  <view class="textarea-wrapper">
-    <view class="textarea-inner-wrapper">
-      <view class="textarea-label">职位详情：</view>
-      <textarea class="textarea-field" model:value="{{jobDesc}}" auto-height placeholder="请输入职位详情"></textarea>
-    </view>
-  </view>
-
-  <view class="textarea-wrapper">
-    <view class="textarea-inner-wrapper">
-      <view class="textarea-label">备注：</view>
-      <textarea class="textarea-field" model:value="{{remark}}" auto-height placeholder="请输入备注"></textarea>
+  <view class="card-panel">
+    <view class="textarea-wrapper">
+      <view class="textarea-inner-wrapper">
+        <view class="textarea-label">备注：</view>
+        <textarea class="textarea-field" model:value="{{remark}}" auto-height placeholder="请输入备注"></textarea>
+      </view>
     </view>
   </view>
 

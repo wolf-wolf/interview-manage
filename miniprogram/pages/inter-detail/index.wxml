@@ -1,6 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="company-name">阿斯蒂芬</view>
+  <view class="top-panel">
+    <view class="company-name">阿斯蒂芬</view>
+  </view>
   <view class="base-info-panel">
     <view class="row">
       <view class="col">时间：2021-08-04</view>
@@ -14,6 +16,12 @@
     <view class="row">地点：随意</view>
   </view>
 
+  <view class="op-panel">
+    <view class="op-btn">信息编辑</view>
+    <view class="op-btn">状态流转</view>
+    <view class="op-btn">流程失败</view>
+    <view class="op-btn">全部删除</view>
+  </view>
 
   <view class="content-wrapper">
     <view class="title">职位详情</view>
