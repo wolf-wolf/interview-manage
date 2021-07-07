@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
+  <top-nav-bar showBack />
   <!-- <view class="card-panel">
     <view class="input-wrapper">
       <view class="input-inner-wrapper">

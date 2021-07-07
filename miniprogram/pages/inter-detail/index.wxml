@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <view class="container">
+  <top-nav-bar showBack />
+
   <view class="top-panel">
     <view class="row mg-b-8">
       <view class="left"></view>
@@ -62,7 +64,7 @@
 
   <block wx:if="{{interInfo.jobDesc || interInfo.remark}}">
     <view class="content-wrapper">
-      <view class="main-title mg-b-12">职位信息</view>
+      <view class="sub-title mg-b-12">职位信息</view>
       <block wx:if="{{interInfo.jobDesc}}">
         <view class="content-noraml">{{interInfo.jobDesc}}</view>
       </block>
@@ -71,7 +73,7 @@
       </block>
     </view>
     <view class="content-wrapper">
-      <view class="main-title mg-b-12">备注</view>
+      <view class="sub-title mg-b-12">备注</view>
       <block wx:if="{{interInfo.remark}}">
         <view class="content-noraml">{{interInfo.remark}}</view>
       </block>

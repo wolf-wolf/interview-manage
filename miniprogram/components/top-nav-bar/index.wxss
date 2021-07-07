@@ -1,0 +1,26 @@
+/* components/top-nav-bar.wxss */
+.top-nav-bar {
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  align-items: center;
+  height: 88rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  box-sizing: border-box;
+}
+
+.back-btn {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 32rpx;
+  color: #313561;
+  letter-spacing: 2rpx;
+}
+
+.back-icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 4rpx;
+}

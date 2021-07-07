@@ -1,0 +1,7 @@
+<!--components/top-nav-bar.wxml-->
+<view style="margin-top: {{statusBarHeight}}px;" class="top-nav-bar" bindtap="goBack">
+  <view class="back-btn" wx:if="{{showBack}}">
+    <image class="back-icon" src="../../images/icon-back.png"></image>
+    返回
+  </view>
+</view>

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "no-more": "../../components/no-more"
+    "no-more": "../../components/no-more",
+    "top-nav-bar": "../../components/top-nav-bar"
   }
 }

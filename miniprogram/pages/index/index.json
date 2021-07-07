@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "inter-list-card": "../../components/inter-list-card"
+    "inter-list-card": "../../components/inter-list-card",
+    "top-nav-bar": "../../components/top-nav-bar"
   }
 }
