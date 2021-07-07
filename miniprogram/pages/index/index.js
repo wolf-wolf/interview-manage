@@ -12,7 +12,7 @@ Page({
 
   goAddPage() {
     wx.navigateTo({
-      url: '/pages/add-inter/index',
+      url: '/pages/add-edit-inter/index',
     })
   },
 
