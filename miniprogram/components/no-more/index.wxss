@@ -1,0 +1,9 @@
+.no-more {
+  font-size: 36rpx;
+  line-height: 36rpx;
+  letter-spacing: 2.26rpx;
+  color: #8788A1;
+  display: flex;
+  justify-content: center;
+  margin-top: 64rpx;
+}

@@ -60,12 +60,27 @@
     <view class="op-btn">全部删除</view>
   </view> -->
 
-  <view class="content-wrapper">
-    <view class="main-title mg-b-12">职位信息</view>
-    <view class="content-noraml">{{interInfo.jobDesc || '暂未添加职位信息'}}</view>
-  </view>
-  <view class="content-wrapper">
-    <view class="main-title mg-b-12">备注</view>
-    <view class="content-noraml">{{interInfo.remark || '暂未添加备注信息'}}</view>
-  </view>
+  <block wx:if="{{interInfo.jobDesc || interInfo.remark}}">
+    <view class="content-wrapper">
+      <view class="main-title mg-b-12">职位信息</view>
+      <block wx:if="{{interInfo.jobDesc}}">
+        <view class="content-noraml">{{interInfo.jobDesc}}</view>
+      </block>
+      <block wx:else>
+        <no-more />
+      </block>
+    </view>
+    <view class="content-wrapper">
+      <view class="main-title mg-b-12">备注</view>
+      <block wx:if="{{interInfo.remark}}">
+        <view class="content-noraml">{{interInfo.remark}}</view>
+      </block>
+      <block wx:else>
+        <no-more />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <image class="icon-no-details" src="../../images/icon-no-details.png"></image>
+  </block>
 </view>

@@ -10,7 +10,7 @@
   background: #F9F8FD;
   box-shadow: 0 44rpx 70rpx -32rpx rgba(35, 35, 35, 0.15);
   border-radius: 0 0 48rpx 48rpx;
-  margin-bottom: 84rpx;
+  margin-bottom: 68rpx;
 }
 
 .row {
@@ -48,5 +48,11 @@
   padding: 0rpx 48rpx;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 48rpx;
+  margin-bottom: 68rpx;
+}
+
+.icon-no-details {
+  width: 390rpx;
+  height: 390rpx;
+  margin-top: 64rpx;
 }
