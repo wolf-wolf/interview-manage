@@ -1,30 +1,33 @@
 /**app.wxss**/
 @import './common.wxss';
 @import './atom.wxss';
+@import './styles/icon.wxss';
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-} 
+}
 
 button {
   background: initial;
 }
 
-button:focus{
+button:focus {
   outline: 0;
 }
 
-button::after{
+button::after {
   border: none;
 }
 
 
 page {
-  background: #f7f7f7;
+  background: #f9f8fd;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  font-family: PingFangSC-Regular, sans-serif;
+  line-height: 1;
 }

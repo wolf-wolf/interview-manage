@@ -71,3 +71,33 @@
 .card-panel .input-wrapper:last-child .input-inner-wrapper {
   border-bottom: 0rpx;
 }
+
+.small-label {
+  font-size: 24rpx;
+  line-height: 1;
+  color: #8788A1;
+}
+
+.main-title,
+.sub-title {
+  color: #313561;
+  font-weight: bold;
+}
+
+.main-title {
+  font-size: 48rpx;
+  letter-spacing: 2.5rpx;
+}
+
+.sub-title {
+  font-size: 40rpx;
+  /* letter-spacing: 2.5rpx; */
+}
+
+.content-noraml {
+  font-size: 32rpx;
+  color: #313561;
+  letter-spacing: 2rpx;
+  line-height: 1.5;
+  font-weight: 400;
+}

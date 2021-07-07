@@ -1,88 +1,52 @@
 /**index.wxss**/
 .container {
-  padding: 16rpx 24rpx;
   width: 100vw;
-  background: #fff;
-}
-
-.op-panel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  border-bottom: 2rpx solid #efefef;
-  padding-bottom: 16rpx;
-  font-size: 24rpx;
-  margin-bottom: 16rpx;
-}
-
-.op-panel .op-btn {
-  border-radius: 4rpx;
-  border: 4rpx solid #efefef;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8rpx 16rpx;
-  box-sizing: border-box;
 }
 
 .top-panel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-}
-
-.company-name {
-  font-size: 48rpx;
-  font-weight: bold;
-  text-align: left;
-  color: #333;
-  width: 100%;
-}
-
-.base-info-panel {
-  font-size: 24rpx;
-  color: #666;
-  width: 100%;
-  padding: 16rpx 0rpx;
-  border-bottom: 1px solid #efefef;
-  margin-bottom: 28rpx;
-  box-sizing: border-box;
+  padding-top: 32rpx;
+  padding-bottom: 48rpx;
+  background: #F9F8FD;
+  box-shadow: 0 44rpx 70rpx -32rpx rgba(35, 35, 35, 0.15);
+  border-radius: 0 0 48rpx 48rpx;
+  margin-bottom: 84rpx;
 }
 
 .row {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 16rpx;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 
-.col {
-  width: 49%;
+.left {
+  width: 132rpx;
+  margin-right: 56rpx;
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
+  padding-top: 4rpx;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.right {
+  flex-grow: 1;
+  padding-right: 56rpx;
+  text-align: justify;
+}
+
+.flag {
+  width: 100%;
+  height: 40rpx;
+  background: #33357D;
+  border-radius: 0 24rpx 24rpx 0;
 }
 
 .content-wrapper {
-  padding-bottom: 16rpx;
-  border-bottom: 1px solid #efefef;
-  margin-bottom: 28rpx;
+  padding: 0rpx 48rpx;
   width: 100%;
-}
-
-.title {
-  font-size: 28rpx;
-  font-weight: bold;
-  text-align: left;
-  color: #333;
-  width: 100%;
-  margin-bottom: 16rpx;
-}
-
-.detail {
-  font-size: 24rpx;
-  text-align: left;
-  color: #666;
-  width: 100%;
-  margin-bottom: 16rpx;
+  box-sizing: border-box;
+  margin-bottom: 48rpx;
 }

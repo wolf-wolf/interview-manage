@@ -1,0 +1,4 @@
+.icon-normal {
+  width: 36rpx;
+  height: 36rpx;
+}

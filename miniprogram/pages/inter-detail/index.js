@@ -10,8 +10,11 @@ Page({
     interInfo: {}
   },
   onLoad: function (query) {
+    console.log(query.id)
     this.setData({
       interInfo: { id: query.id }
+      // fixme 调试使用
+      // interInfo: {id: 'INffd80576-5847-4708-98a7-02fcf3ff8607'}
     })
   },
   onShow: function () {

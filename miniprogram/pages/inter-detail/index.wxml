@@ -1,34 +1,71 @@
 <!--index.wxml-->
 <view class="container">
   <view class="top-panel">
-    <view class="company-name">{{interInfo.employerCompany.name}}</view>
-  </view>
-  <view class="base-info-panel">
-    <view class="row">
-      <view class="col">时间：{{interInfo.interDate}}</view>
-      <view class="col">猎头：{{interInfo.guideInfo.name}}</view>
+    <view class="row mg-b-8">
+      <view class="left"></view>
+      <view class="right small-label">公司名称</view>
     </view>
 
-    <view class="row">
-      <view class="col">阶段：{{interInfo.stage[interInfo.stage.lenght-1].statue}}</view>
-      <view class="col">方式：{{interInfo.stage[interInfo.stage.lenght-1].statue}}</view>
+    <!-- 公司名称 -->
+    <view class="row mg-b-38">
+      <view class="left">
+        <view class="flag" />
+      </view>
+
+      <view class="right main-title">{{interInfo.employerCompany.name}}</view>
     </view>
-    <view class="row">地点：{{interInfo.address}}</view>
+
+    <!-- 面试阶段及方式 -->
+    <view class="row mg-b-12">
+      <view class="left">
+        <image class="icon-normal" src="../../images/icon-inter-type.png"></image>
+      </view>
+
+      <view class="right content-noraml">{{interInfo.stage[interInfo.stage.lenght-1].statue || '-'}}</view>
+    </view>
+
+    <!-- 面试日期 -->
+    <view class="row mg-b-12">
+      <view class="left">
+        <image class="icon-normal" src="../../images/icon-inter-date.png"></image>
+      </view>
+
+      <view class="right content-noraml">{{interInfo.interDate || '暂无面试时间'}}</view>
+    </view>
+
+    <!-- 面试地址 -->
+    <view class="row mg-b-12">
+      <view class="left">
+        <image class="icon-normal" src="../../images/icon-inter-addr.png"></image>
+      </view>
+
+      <view class="right content-noraml">北京市海淀区知春路卫星通讯大厦，假如地址比较长的话就往下折行，1.5 倍行间距，据右边边距 28{{interInfo.address}}</view>
+    </view>
+
+    <!-- 面试联系人 -->
+    <view class="row">
+      <view class="left">
+        <image class="icon-normal" src="../../images/icon-inter-guide.png"></image>
+      </view>
+
+      <view class="right content-noraml">{{interInfo.guideInfo.name}}</view>
+    </view>
   </view>
 
-  <view class="op-panel">
+
+  <!-- <view class="op-panel">
     <view class="op-btn" bindtap="goEdit">信息编辑</view>
     <view class="op-btn">状态流转</view>
     <view class="op-btn">流程失败</view>
     <view class="op-btn">全部删除</view>
-  </view>
+  </view> -->
 
   <view class="content-wrapper">
-    <view class="title">职位信息</view>
-    <view class="detail">{{interInfo.jobDesc || '暂未添加职位信息'}}</view>
+    <view class="main-title">职位信息</view>
+    <view class="content-noraml">{{interInfo.jobDesc || '暂未添加职位信息'}}</view>
   </view>
   <view class="content-wrapper">
-    <view class="title">备注信息</view>
-    <view class="detail">{{interInfo.remark || '暂未添加备注信息'}}</view>
+    <view class="main-title">备注信息</view>
+    <view class="content-noraml">{{interInfo.remark || '暂未添加备注信息'}}</view>
   </view>
 </view>
