@@ -61,11 +61,11 @@
   </view> -->
 
   <view class="content-wrapper">
-    <view class="main-title">职位信息</view>
+    <view class="main-title mg-b-12">职位信息</view>
     <view class="content-noraml">{{interInfo.jobDesc || '暂未添加职位信息'}}</view>
   </view>
   <view class="content-wrapper">
-    <view class="main-title">备注信息</view>
+    <view class="main-title mg-b-12">备注信息</view>
     <view class="content-noraml">{{interInfo.remark || '暂未添加备注信息'}}</view>
   </view>
 </view>
