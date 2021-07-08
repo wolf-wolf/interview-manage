@@ -55,3 +55,109 @@
   height: 390rpx;
   margin-top: 64rpx;
 }
+
+.bottom-btn {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  position: fixed;
+  left: 50%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-1 {
+  bottom: 64rpx;
+  -webkit-animation: flyIn-1 .35s forwards;
+  animation: flyIn-1 .35s forwards;
+  animation-delay: .5s;
+  background: rgba(51, 53, 125, 0.75);
+  box-shadow: 0 26rpx 70rpx 0 rgba(121, 79, 79, 0.2);
+}
+
+.btn-2 {
+  bottom: 96rpx;
+  -webkit-animation: flyIn-2 .45s forwards;
+  animation: flyIn-2 .45s forwards;
+  animation-delay: .5s;
+  background: rgba(57, 150, 55, 0.75);
+  box-shadow: 0 26rpx 70rpx 0 rgba(35, 35, 35, 0.20);
+}
+
+.btn-3 {
+  bottom: 96rpx;
+  -webkit-animation: flyIn-3 .55s forwards;
+  animation: flyIn-3 .55s forwards;
+  animation-delay: .5s;
+  background: rgba(151, 150, 150, 0.75);
+  box-shadow: 0 26rpx 70rpx 0 rgba(35, 35, 35, 0.20);
+}
+
+.btn-4 {
+  bottom: 64rpx;
+  -webkit-animation: flyIn-4 .65s forwards;
+  animation: flyIn-4 .65s forwards;
+  animation-delay: .5s;
+  background: rgba(185, 17, 16, 0.75);
+  box-shadow: 0 26rpx 70rpx 0 rgba(35, 35, 35, 0.20);
+}
+
+.op-btn-icon {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+@keyframes flyIn-1 {
+  from {
+    left: calc(50% - 40rpx);
+    opacity: 0;
+    -webkit-transform: translateY(300%) scale(0);
+  }
+
+  to {
+    opacity: 1;
+    left: calc((100% - 320rpx - 60rpx) / 2);
+  }
+}
+
+
+@keyframes flyIn-2 {
+  from {
+    left: calc(50% - 40rpx);
+    opacity: 0;
+    -webkit-transform: translateY(300%) scale(0);
+  }
+
+  to {
+    opacity: 1;
+    left: calc((100% - 320rpx - 60rpx) / 2 + 80rpx + 20rpx);
+  }
+}
+
+@keyframes flyIn-3 {
+  from {
+    left: calc(50% - 40rpx);
+    opacity: 0;
+    -webkit-transform: translateY(300%) scale(0);
+  }
+
+  to {
+    opacity: 1;
+    left: calc((100% - 320rpx - 60rpx) / 2 + 160rpx + 40rpx);
+  }
+}
+
+@keyframes flyIn-4 {
+  from {
+    left: calc(50% - 40rpx);
+    opacity: 0;
+    -webkit-transform: translateY(300%) scale(0);
+  }
+
+  to {
+    opacity: 1;
+    left: calc((100% - 320rpx - 60rpx) / 2 + 240rpx + 60rpx);
+  }
+}

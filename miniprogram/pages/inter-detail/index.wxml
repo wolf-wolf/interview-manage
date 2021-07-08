@@ -41,7 +41,7 @@
         <image class="icon-normal" src="../../images/icon-inter-addr.png"></image>
       </view>
 
-      <view class="right content-noraml">北京市海淀区知春路卫星通讯大厦，假如地址比较长的话就往下折行，1.5 倍行间距，据右边边距 28{{interInfo.address}}</view>
+      <view class="right content-noraml">{{interInfo.address}}</view>
     </view>
 
     <!-- 面试联系人 -->
@@ -53,14 +53,6 @@
       <view class="right content-noraml">{{interInfo.guideInfo.name}}</view>
     </view>
   </view>
-
-
-  <!-- <view class="op-panel">
-    <view class="op-btn" bindtap="goEdit">信息编辑</view>
-    <view class="op-btn">状态流转</view>
-    <view class="op-btn">流程失败</view>
-    <view class="op-btn">全部删除</view>
-  </view> -->
 
   <block wx:if="{{interInfo.jobDesc || interInfo.remark}}">
     <view class="content-wrapper">
@@ -85,4 +77,17 @@
   <block wx:else>
     <image class="icon-no-details" src="../../images/icon-no-details.png"></image>
   </block>
+
+  <view class="bottom-btn btn-1" bindtap="goEdit">
+    <image class="op-btn-icon" src="../../images/icon-detail-edit.png" />
+  </view>
+  <view class="bottom-btn btn-2">
+    <image class="op-btn-icon" src="../../images/icon-detail-success.png" />
+  </view>
+  <view class="bottom-btn btn-3">
+    <image class="op-btn-icon" src="../../images/icon-detail-fail.png" />
+  </view>
+  <view class="bottom-btn btn-4">
+    <image class="op-btn-icon" src="../../images/icon-detail-del.png" />
+  </view>
 </view>
