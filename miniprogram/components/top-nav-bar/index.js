@@ -6,6 +6,7 @@ Component({
   properties: {
     showBack: {
       type: Boolean,
+      default: false,
     },
     title: {
       type: String,

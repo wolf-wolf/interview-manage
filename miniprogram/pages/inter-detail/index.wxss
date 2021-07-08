@@ -33,8 +33,7 @@
 
 .right {
   flex-grow: 1;
-  padding-right: 56rpx;
-  text-align: justify;
+  padding-right: 52rpx;
 }
 
 .flag {
@@ -45,7 +44,7 @@
 }
 
 .content-wrapper {
-  padding: 0rpx 48rpx;
+  padding: 0rpx 52rpx;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 68rpx;
