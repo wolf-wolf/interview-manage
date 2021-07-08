@@ -7,14 +7,18 @@ const app = getApp()
 
 Page({
   data: {
-    interInfo: {}
+    interInfo: {},
+    delDialog: {
+      show: false,
+      btns: [{ id: 'cancel', text: '取消' }, { id: 'confirm', text: '确定' }]
+    }
   },
   onLoad: function (query) {
     console.log(query.id)
     this.setData({
-      // interInfo: { id: query.id }
+      interInfo: { id: query.id }
       // fixme 调试使用
-      interInfo: {id: 'INccde49bd-d97c-452f-9a57-73c83bf103e8"'}
+      // interInfo: {id: 'INccde49bd-d97c-452f-9a57-73c83bf103e8"'}
     })
   },
   onShow: function () {
@@ -31,6 +35,25 @@ Page({
         guideInfo
       }
     })
+  },
+  showDelDialog() {
+    this.toggleDelDialg(true)
+  },
+  toggleDelDialg(show) {
+    this.setData({
+      delDialog: {
+        ...this.data.delDialog,
+        show: show
+      }
+    })
+  },
+  delDialogTapHandler(e) {
+    console.log(e)
+    if (e.detail.item.id === 'confirm') {
+      console.log('删除本条记录')
+    }
+
+    this.toggleDelDialg(false);
   },
   goEdit() {
     service.goPage('interEdit', { params: { id: this.data.interInfo.id } })

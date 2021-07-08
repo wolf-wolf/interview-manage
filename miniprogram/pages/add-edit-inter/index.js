@@ -12,23 +12,29 @@ Page({
     // interDate: utils.format(Date.now(), 'YYYY-MM-DD'),
     // interTime: utils.format(Date.now(), 'hh:mm'),
     remark: '',
-    jobDesc: ''
+    jobDesc: '',
   },
 
   onLoad: function (query) {
-    let interInfo = dao.inter.getById(query.id);
-    console.log(interInfo)
-    let employerCompany = dao.employerCompany.getById(interInfo.employerCompanyId);
-    let guideInfo = dao.guide.getById(interInfo.guideId);
-    let fullInfo = {
-      ...interInfo,
-      employerCompany,
-      guideInfo
-    };
+    if (query && query.id) {
+      let interInfo = dao.inter.getById(query.id);
+      console.log(interInfo)
+      let employerCompany = dao.employerCompany.getById(interInfo.employerCompanyId);
+      let guideInfo = dao.guide.getById(interInfo.guideId);
+      let fullInfo = {
+        ...interInfo,
+        employerCompany,
+        guideInfo
+      };
 
-    console.log('fullInfo', fullInfo)
+      this.setData({
+        companyName: employerCompany.name,
+        guideName: guideInfo.name,
+        jobDesc: interInfo.jobDesc,
+        remark: interInfo.remark,
+      });
+    }
   },
-
   addInter() {
     let guideInfo = dao.guide.add({ name: this.data.guideName });
     let companyInfo = dao.employerCompany.add({ name: this.data.companyName });

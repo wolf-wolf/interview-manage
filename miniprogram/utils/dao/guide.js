@@ -6,6 +6,14 @@ function updateById() {
 
 }
 
+function delById(id) {
+  let guideStore = JSON.parse(wx.getStorageSync(STORE_KEY) || "{}");
+
+  delete guideStore[id];
+
+  wx.setStorageSync(STORE_KEY, JSON.stringify(guideStore));
+}
+
 function add({ name, type }) {
   let guideInfo = new model.Guide({
     name
@@ -20,11 +28,12 @@ function add({ name, type }) {
 }
 
 function getById(id) {
-  let guideInfo = JSON.parse(wx.getStorageSync(STORE_KEY) || "{}");
+  let guideStore = JSON.parse(wx.getStorageSync(STORE_KEY) || "{}");
 
-  return guideInfo[id];
+  return guideStore[id];
 }
 
 module.exports.add = add;
+module.exports.delById = delById;
 module.exports.updateById = updateById;
 module.exports.getById = getById;

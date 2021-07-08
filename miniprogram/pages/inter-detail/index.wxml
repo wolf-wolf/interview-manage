@@ -78,16 +78,22 @@
     <image class="icon-no-details" src="../../images/icon-no-details.png"></image>
   </block>
 
-  <view class="bottom-btn btn-1" bindtap="goEdit">
-    <image class="op-btn-icon" src="../../images/icon-detail-edit.png" />
-  </view>
-  <view class="bottom-btn btn-2">
-    <image class="op-btn-icon" src="../../images/icon-detail-success.png" />
-  </view>
-  <view class="bottom-btn btn-3">
-    <image class="op-btn-icon" src="../../images/icon-detail-fail.png" />
-  </view>
-  <view class="bottom-btn btn-4">
-    <image class="op-btn-icon" src="../../images/icon-detail-del.png" />
-  </view>
+  <mp-dialog title="确认" show="{{delDialog.show}}" bindbuttontap="delDialogTapHandler" buttons="{{delDialog.btns}}">
+    <view>是否确认删除面试记录</view>
+  </mp-dialog>
+
+  <block>
+    <view class="bottom-btn btn-1" bindtap="goEdit">
+      <image class="op-btn-icon" src="../../images/icon-detail-edit.png" />
+    </view>
+    <view class="bottom-btn btn-2">
+      <image class="op-btn-icon" src="../../images/icon-detail-success.png" />
+    </view>
+    <view class="bottom-btn btn-3">
+      <image class="op-btn-icon" src="../../images/icon-detail-fail.png" />
+    </view>
+    <view class="bottom-btn btn-4" bindtap="showDelDialog">
+      <image class="op-btn-icon" src="../../images/icon-detail-del.png" />
+    </view>
+  </block>
 </view>

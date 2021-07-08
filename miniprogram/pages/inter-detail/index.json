@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "no-more": "../../components/no-more",
-    "top-nav-bar": "../../components/top-nav-bar"
+    "top-nav-bar": "../../components/top-nav-bar",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
   }
 }

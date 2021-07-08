@@ -1,5 +1,7 @@
-const model = require("../model.js")
-const constants = require("../constants.js")
+const model = require("../model.js");
+const constants = require("../constants.js");
+const guideDao = require('./guide');
+const employerCompanyDao = require('./employer-company');
 const STORE_KEY = constants.STORE_KEY.INTERVIEW;
 
 function add({ guideId, employerCompanyId, interDate, interTime, address, remark, jobDesc }) {
@@ -17,12 +19,25 @@ function updateById() {
 
 }
 
-function getById(id) {
-  let interInfo = JSON.parse(wx.getStorageSync(STORE_KEY) || "{}");
+function delById(id, delRelation = true) {
+  let interStore = JSON.parse(wx.getStorageSync(STORE_KEY) || "{}");
+  if (delRelation) {
+    guideDao.delById(interStore[id].guideId);
+    employerCompanyDao.delById(interStore[id].employerCompanyId);
+  }
 
-  return interInfo[id];
+  delete interStore[id];
+
+  wx.setStorageSync(STORE_KEY, JSON.stringify(interStore));
+}
+
+function getById(id) {
+  let interStore = JSON.parse(wx.getStorageSync(STORE_KEY) || "{}");
+
+  return interStore[id];
 }
 
 module.exports.add = add;
+module.exports.delById = delById;
 module.exports.updateById = updateById;
 module.exports.getById = getById;

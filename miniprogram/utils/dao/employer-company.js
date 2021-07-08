@@ -6,6 +6,14 @@ function updateById() {
 
 }
 
+function delById(id) {
+  let companyStore = JSON.parse(wx.getStorageSync(STORE_KEY) || "{}");
+
+  delete companyStore[id];
+
+  wx.setStorageSync(STORE_KEY, JSON.stringify(companyStore));
+}
+
 function add({ name }) {
   let companyInfo = new model.EmployerCompany({
     name
@@ -27,5 +35,6 @@ function getById(id) {
 }
 
 module.exports.add = add;
+module.exports.delById = delById;
 module.exports.updateById = updateById;
 module.exports.getById = getById;
