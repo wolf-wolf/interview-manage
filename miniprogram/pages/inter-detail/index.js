@@ -48,9 +48,9 @@ Page({
     })
   },
   delDialogTapHandler(e) {
-    console.log(e)
     if (e.detail.item.id === 'confirm') {
-      console.log('删除本条记录')
+      dao.inter.delById(this.data.interInfo.id);
+      wx.navigateBack()
     }
 
     this.toggleDelDialg(false);

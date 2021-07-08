@@ -23,7 +23,7 @@
         <image class="icon-normal" src="../../images/icon-inter-type.png"></image>
       </view>
 
-      <view class="right content-noraml">{{interInfo.stage[interInfo.stage.lenght-1].statue || '-'}}</view>
+      <view class="right content-noraml">{{interInfo.stage[interInfo.stage.lenght-1].statue || '未安排面试'}}</view>
     </view>
 
     <!-- 面试日期 -->
@@ -41,7 +41,7 @@
         <image class="icon-normal" src="../../images/icon-inter-addr.png"></image>
       </view>
 
-      <view class="right content-noraml">{{interInfo.address}}</view>
+      <view class="right content-noraml">{{interInfo.address || '暂无面试地点'}}</view>
     </view>
 
     <!-- 面试联系人 -->

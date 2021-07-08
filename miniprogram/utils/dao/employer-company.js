@@ -2,8 +2,15 @@ const model = require("../model.js")
 const constants = require("../constants.js")
 const STORE_KEY = constants.STORE_KEY.EMPLOYER_COMPANY;
 
-function updateById() {
+function updateById(id, { name }) {
+  let companyStore = JSON.parse(wx.getStorageSync(STORE_KEY) || "{}");
 
+  companyStore[id] = {
+    ...companyStore[id],
+    name: name
+  };
+
+  wx.setStorageSync(STORE_KEY, JSON.stringify(companyStore));
 }
 
 function delById(id) {

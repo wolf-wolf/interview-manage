@@ -15,8 +15,15 @@ function add({ guideId, employerCompanyId, interDate, interTime, address, remark
   wx.setStorageSync(STORE_KEY, JSON.stringify(interStore));
 }
 
-function updateById() {
+function updateById(id, { interDate, interTime, address, remark, jobDesc }) {
+  let interStore = JSON.parse(wx.getStorageSync(STORE_KEY) || "{}");
 
+  interStore[id] = {
+    ...interStore[id],
+    interDate, interTime, address, remark, jobDesc
+  };
+
+  wx.setStorageSync(STORE_KEY, JSON.stringify(interStore));
 }
 
 function delById(id, delRelation = true) {

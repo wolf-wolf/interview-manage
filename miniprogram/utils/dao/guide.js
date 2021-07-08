@@ -2,8 +2,15 @@ const model = require("../model.js")
 const constants = require("../constants.js")
 const STORE_KEY = constants.STORE_KEY.GUIDE;
 
-function updateById() {
+function updateById(id, { name }) {
+  let guideStore = JSON.parse(wx.getStorageSync(STORE_KEY) || "{}");
 
+  guideStore[id] = {
+    ...guideStore[id],
+    name: name
+  };
+
+  wx.setStorageSync(STORE_KEY, JSON.stringify(guideStore));
 }
 
 function delById(id) {
