@@ -1,6 +1,38 @@
 <!--index.wxml-->
 <view class="container">
-  <top-nav-bar title="首页"/>
+  <top-nav-bar title="首页" />
+
+  <view class="main-title">
+    今日面试
+  </view>
+
+  <swiper wx:if="{{!!comingInter.length}}" class="comming" indicator-color="#DFE2EC" indicator-active-color="#33357D"
+    indicator-dots="true" autoplay="{{false}}" interval="2000" duration="500">
+    <block wx:for="{{comingInter}}" wx:key="*this">
+      <swiper-item class="today-inter-wrapper" class="today-inter-item">
+        <view class="main-top">
+          <image src="../../images/img-no-today-inter.png" class="item-bg"></image>
+          <view class="today-inter-item-top">
+            <view class="inner-left">
+              <view class="inter-time">{{item.interTime}}</view>
+              <view class="inter-date">{{item.interDate}}</view>
+            </view>
+            <view class="inner-right">一面</view>
+          </view>
+          <view class="today-inter-item-bottom">{{item.employerCompany.name}}</view>
+        </view>
+        <view class="inter-addr-wrapper">
+          <image class="addr-icon" src="../../images/icon-inter-addr-2.png"></image>
+          <view class="addr-info">{{item.address}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view wx:else class="no-today-inter">
+
+  </view>
+
 
   <inter-list-card status-title="进行中..." list="{{underwayInter}}" />
   <inter-list-card status-title="即将开始..." list="{{comingInter}}" />

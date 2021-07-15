@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "inter-list-card": "../../components/inter-list-card",
+    "interview-item": "../../components/inter-item",
     "top-nav-bar": "../../components/top-nav-bar"
   }
 }
